@@ -38,6 +38,27 @@ React Canvas provides a set of standard React components that abstract the under
 
 **Image** is exactly what you think it is. However, it adds the ability to hide an image until it is fully loaded and optionally fade it in on load.
 
+### &lt;Gradient&gt;
+
+**Gradient** can be used to set the background of a group or surface. 
+```javascript
+  render() {
+    ...
+    return (
+      <Group style={this.getStyle()}>
+        <Gradient style={this.getGradientStyle()} 
+                  colorStops={this.getGradientColors()} />
+      </Group>
+    );
+  }
+  getGradientColors(){
+    return [
+      { color: "transparent", position: 0 },
+      { color: "#000", position: 1 }
+    ]
+  }
+``` 
+
 ### &lt;ListView&gt;
 
 **ListView** is a touch scrolling container that renders a list of elements in a column. Think of it like UITableView for the web. It leverages many of the same optimizations that make table views on iOS and list views on Android fast.
@@ -179,7 +200,26 @@ This will start a live reloading server on port 8080. To override the default se
 
 **A note on NODE_ENV and React**: running the examples with `NODE_ENV=production` will noticeably improve scrolling performance. This is because React skips propType validation in production mode.
 
+
+## Using with webpack
+
+The [brfs](https://github.com/substack/brfs) transform is required in order to use the project with webpack.
+
+```bash
+npm install -g brfs
+npm install --save-dev transform-loader brfs
+```
+
+Then add the [brfs](https://github.com/substack/brfs) transform to your webpack config
+
+```javascript
+module: {
+  postLoaders: [
+    { loader: "transform?brfs" }
+  ]
+}
+```
+
 ## Contributing
 
 We welcome pull requests for bug fixes, new features, and improvements to React Canvas. Contributors to the main repository must accept Flipboard's Apache-style [Individual Contributor License Agreement (CLA)](https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform) before any changes can be merged.
-
