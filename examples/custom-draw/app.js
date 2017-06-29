@@ -3,6 +3,7 @@
 'use strict';
 
 var React = require('react');
+var ReactDom = require('react-dom');
 var ReactCanvas = require('react-canvas');
 
 var Surface = ReactCanvas.Surface;
@@ -69,7 +70,9 @@ var App = React.createClass({
   render: function () {
     return (
       <Surface top={10} left={10} width={500} height={500}>
-          <Circle style={{
+          <Circle
+              background={'blue'}
+              style={{
             top: 10, 
             left: 10, 
             width: 180,
@@ -89,4 +92,4 @@ var App = React.createClass({
 
 });
 
-React.render(<App />, document.getElementById('main'));
+ReactDom.render(<App />, document.getElementById('main'));
