@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var del = require('del');
 var connect = require('gulp-connect');
 var webpack = require('gulp-webpack');
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require('./old.js');
 
 var port = process.env.PORT || 8080;
 var reloadPort = process.env.RELOAD_PORT || 35729;
