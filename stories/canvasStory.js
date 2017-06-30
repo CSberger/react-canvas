@@ -10,6 +10,7 @@ storiesOf('Gradient', module)
     .add('small', () => {
         const props = {size: {width: 80, height: 80}};
         return (
+            <div>
             <Surface top={0} left={0} width={props.size.width} height={props.size.height}>
                 <Gradient
                     style={{
@@ -24,6 +25,7 @@ storiesOf('Gradient', module)
                     ]}
                 />
             </Surface>
+            </div>
         );
     });
 
