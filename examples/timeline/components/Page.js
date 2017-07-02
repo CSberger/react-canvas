@@ -1,8 +1,5 @@
-/** @jsx React.DOM */
+import React from 'react';
 
-'use strict';
-
-var React = require('react');
 var ReactCanvas = require('react-canvas');
 
 var Group = ReactCanvas.Group;
