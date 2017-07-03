@@ -1,15 +1,10 @@
-/** @jsx React.DOM */
-
-'use strict';
-
 import React from 'react';
+
 var ReactCanvas = require('react-canvas');
 
-var Group = ReactCanvas.Group;
-var Image = ReactCanvas.Image;
-var Text = ReactCanvas.Text;
+const { Group, Image, Text } = ReactCanvas;
 
-var Item = React.createClass({
+const Item = React.createClass({
 
   propTypes: {
     width: React.PropTypes.number.isRequired,
