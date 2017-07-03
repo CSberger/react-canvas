@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 
-import {Gradient, Surface} from '../lib/ReactCanvas'
-
+import ReactCanvas from '../lib/ReactCanvas'
+const {Gradient, Surface} = ReactCanvas;
 
 storiesOf('Gradient', module)
     .add('transparent-grey', () => {

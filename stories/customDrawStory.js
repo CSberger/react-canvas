@@ -3,9 +3,9 @@ import ReactDom from 'react-dom';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { registerLayerType, createCanvasComponent, Surface } from '../lib/ReactCanvas'
+import ReactCanvas from '../lib/ReactCanvas'
 
-
+const { registerLayerType, createCanvasComponent, Surface } = ReactCanvas;
 
 
 registerLayerType('circle', function (ctx, layer) {

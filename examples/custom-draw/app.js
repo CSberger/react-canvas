@@ -4,13 +4,12 @@
 
 var React = require('react');
 var ReactDom = require('react-dom');
-var ReactCanvas = require('react-canvas');
-
-var Surface = ReactCanvas.Surface;
-var Group = ReactCanvas.Group;
 
 
-ReactCanvas.registerLayerType('circle', function (ctx, layer) {
+import ReactCanvas from '../../lib/ReactCanvas';
+const {registerLayerType, Surface, Group} = ReactCanvas;
+
+registerLayerType('circle', function (ctx, layer) {
     var x = layer.frame.x; 
     var y = layer.frame.y;
     var width = layer.frame.width;
