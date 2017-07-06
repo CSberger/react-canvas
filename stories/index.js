@@ -6,3 +6,4 @@ import { action } from '@storybook/addon-actions';
 import './canvasStory';
 import './listviewStory';
 import './customDrawStory';
+import './customDrawStoryWebgl';
