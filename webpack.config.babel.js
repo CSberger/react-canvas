@@ -1,28 +1,33 @@
-const path = require('path');
+import path from 'path';
 
 const config = {
-    entry: ['./src/index.js'],
-    output: {
-      filename: '[name].bundle.js',
-      path: path.join(__dirname, 'dist'),
-      libraryTarget: 'commonjs'
-    },
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, '/dist'),
 
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env']
-                    }
-                }
-            }
-        ]
 
-    },
+    // the name of the exported library
+
+    libraryTarget: "commonjs", // universal module definition
+    // the type of the exported library
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      }
+    ]
+
+  },
 
 };
 

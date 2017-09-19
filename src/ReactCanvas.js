@@ -13,7 +13,7 @@ import FontFace from './FontFace';
 import measureText from './measureText';
 import { registerLayerType } from './DrawingUtils';
 
-const ReactCanvas = {
+export const ReactCanvas = {
   Surface,
   Layer,
   Group,
@@ -28,4 +28,5 @@ const ReactCanvas = {
   FrameUtils,
   registerLayerType,
 };
-export default ReactCanvas;
+
+

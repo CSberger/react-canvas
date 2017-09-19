@@ -5,8 +5,10 @@ import { storiesOf } from '@storybook/react';
 import range from 'lodash.range';
 import { scaleBand, interpolateInferno } from 'd3-scale';
 
-import ReactCanvas from '../lib/ReactCanvas';
-const {Gradient, ListView, Surface, Group, Image, Text, registerLayerType, createCanvasComponent} = ReactCanvas;
+import ReactCanvas from '../dist/bundle';
+
+console.log('heatmapstory');
+const {Gradient, ListView, Surface, Group, Image, Text, registerLayerType, createCanvasComponent} = ReactCanvas.default;
 
 import Alea from 'alea';
 

@@ -1,3 +1,5 @@
-import ReactCanvas from '../lib/ReactCanvas'
+import { ReactCanvas } from './ReactCanvas';
 
-export default ReactCanvas;
+const lib = ReactCanvas;
+console.log('exported' + JSON.stringify(Object.keys(ReactCanvas)));
+export default lib;

@@ -1,4 +1,4 @@
-export function Frame (x, y, width, height) {
+export default function Frame (x, y, width, height) {
   this.x = x;
   this.y = y;
   this.width = width;
