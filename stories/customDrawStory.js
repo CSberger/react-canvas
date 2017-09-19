@@ -1,11 +1,11 @@
-var React = require('react');
-var ReactDom = require('react-dom');
+import React from 'react';
+import ReactDom from 'react-dom';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import {Gradient, ListView, Surface, Group, Image, Text, registerLayerType, createCanvasComponent} from '../lib/ReactCanvas'
+import ReactCanvas from '../lib/ReactCanvas'
 
-
+const { registerLayerType, createCanvasComponent, Surface } = ReactCanvas;
 
 
 registerLayerType('circle', function (ctx, layer) {
@@ -47,7 +47,7 @@ registerLayerType('circle', function (ctx, layer) {
     }
 });
 
-var Circle = createCanvasComponent({
+const Circle = createCanvasComponent({
   displayName: 'Circle',
   layerType: 'circle',
 

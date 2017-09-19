@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactCanvas from 'react-canvas';
+import {Gradient, Surface} from 'react-canvas';
 
-var Gradient = ReactCanvas.Gradient;
-var Surface = ReactCanvas.Surface;
 
 var App = React.createClass({
 
