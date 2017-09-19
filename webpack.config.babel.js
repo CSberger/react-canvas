@@ -3,9 +3,9 @@ const path = require('path');
 const config = {
     entry: ['./src/index.js'],
     output: {
-          filename: '[name].bundle.js',
-        path: path.join(__dirname, 'dist')
-
+      filename: '[name].bundle.js',
+      path: path.join(__dirname, 'dist'),
+      libraryTarget: 'commonjs'
     },
 
     module: {

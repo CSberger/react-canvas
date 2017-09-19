@@ -1,3 +1,2 @@
-/**
- * Created by chris on 9/18/17.
- */
+import Canvas from './src/index'
+export default Canvas;
