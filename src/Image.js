@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import createComponent from './createComponent';
 
@@ -23,9 +21,9 @@ var RawImage = createComponent('Image', LayerMixin, {
   },
 
   mountComponent: function (     transaction,
-     nativeParent,
-     nativeContainerInfo,
-     context) {
+                                 nativeParent,
+                                 nativeContainerInfo,
+                                 context) {
     var props = this._currentElement.props;
     var layer = this.node;
     this.applyLayerProps({}, props);

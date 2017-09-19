@@ -1,2 +1,2 @@
-import Canvas from './src/index'
-export default Canvas;
+import ReactCanvas from './src/index'
+export default ReactCanvas;
