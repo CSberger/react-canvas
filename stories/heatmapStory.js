@@ -5,7 +5,8 @@ import { storiesOf } from '@storybook/react';
 import range from 'lodash.range';
 import { scaleBand, interpolateInferno } from 'd3-scale';
 
-import {Gradient, ListView, Surface, Group, Image, Text, registerLayerType, createCanvasComponent} from '../lib/ReactCanvas'
+import ReactCanvas from '../lib/ReactCanvas';
+const {Gradient, ListView, Surface, Group, Image, Text, registerLayerType, createCanvasComponent} = ReactCanvas;
 
 import Alea from 'alea';
 
